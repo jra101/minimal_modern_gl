@@ -196,7 +196,5 @@ int main()
 
     platform::destroy_window(window);
 
-    delete window;
-
     return 0;
 }

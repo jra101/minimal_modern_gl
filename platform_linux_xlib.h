@@ -90,10 +90,7 @@ namespace platform
         XFreeColormap(window->display, window->colormap);
         XCloseDisplay(window->display);
 
-        window->display = 0;
-        window->colormap = 0;
-        window->handle = 0;
-        window->context = 0;
+        delete window;
     }
 
     bool handle_events(platform_window_t *window)

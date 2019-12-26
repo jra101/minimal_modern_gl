@@ -98,10 +98,7 @@ namespace platform
         DestroyWindow(window->handle);
         UnregisterClass(window->cls.c_str(), NULL);
 
-        window->handle = 0;
-        window->cls = "";
-        window->dc = 0;
-        window->rc = 0;
+        delete window;
     }
 
     bool handle_events(platform_window_t *)
